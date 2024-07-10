@@ -16,7 +16,7 @@ public class StudentAppController {
 	
 	@PostMapping(name = "/createStudent")
 	public StudentAppEntity createStudent(@RequestBody(required = true) StudentAppEntity appEntity) {
-		
+	
 		return service.createstudent(appEntity);
 	}
 
