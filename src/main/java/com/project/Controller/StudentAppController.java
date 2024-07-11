@@ -14,7 +14,7 @@ public class StudentAppController {
 	@Autowired
 	private StudentAppService service;
 	
-	@PostMapping(name = "/createStudent")
+	@PostMapping("/createStudent")
 	public StudentAppEntity createStudent(@RequestBody(required = true) StudentAppEntity appEntity) {
 	
 		return service.createstudent(appEntity);
