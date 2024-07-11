@@ -7,17 +7,25 @@ import org.springframework.stereotype.Service;
 
 import com.project.Entity.StudentAppEntity;
 import com.project.Repository.StudentAppRepository;
+import com.project.Response.StudentResponse;
 
 @Service
 public class StudentAppService {
 	@Autowired
 	public StudentAppRepository repository;
-	public StudentAppEntity createstudent(StudentAppEntity entity) {
-	return repository.save(entity) ;
+
+	public StudentResponse createstudent(StudentAppEntity entity) {
+		StudentResponse response = new StudentResponse();
+		StudentAppEntity studentAppEntity = repository.save(entity);
+		response.setId(studentAppEntity.getId());
+		response.setName(studentAppEntity.getName());
+		response.setSection(studentAppEntity.getSection());
+		return response;
 	}
-	public List<StudentAppEntity> getAllStudents(){
+
+	public List<StudentAppEntity> getAllStudents() {
 		return repository.findAll();
-		
+
 	}
 
 }
