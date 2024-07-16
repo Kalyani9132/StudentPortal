@@ -1,0 +1,11 @@
+
+.settings/org.eclipse.core.resources.prefs
+.settings/org.eclipse.jdt.apt.core.prefs
+*.prefs
+*.class
+target/classes/application.properties
+target/classes/META-INF/MANIFEST.MF
+target/classes/META-INF/maven/com.project/StudentPortalApp/pom.xml
+target/classes/META-INF/maven/com.project/StudentPortalApp/pom.properties
+.project
+.classpath
